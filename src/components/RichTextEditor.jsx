@@ -44,6 +44,7 @@ import SavePlugin from './SavePlugin';
 import ExportPlugin from './ExportPlugin';
 import StatusBar from './StatusBar';
 import ReadOnlyPlugin from './ReadOnlyPlugin';
+import PluginErrorBoundary from './PluginErrorBoundary';
 import ErrorBoundary from './ErrorBoundary';
 
 
@@ -314,15 +315,25 @@ export default function RichTextEditor() {
                     {/* Enhanced Plugins for Article Mode */}
                     {postType === POST_TYPES.ARTICLE && (
                       <>
-                        <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
-                        <TablePlugin />
-                        <HorizontalRulePlugin />
+                        <PluginErrorBoundary pluginName="MarkdownShortcutPlugin">
+                          <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
+                        </PluginErrorBoundary>
+                        <PluginErrorBoundary pluginName="TablePlugin">
+                          <TablePlugin />
+                        </PluginErrorBoundary>
+                        <PluginErrorBoundary pluginName="HorizontalRulePlugin">
+                          <HorizontalRulePlugin />
+                        </PluginErrorBoundary>
                       </>
                     )}
                     
                     {/* Auto-link and Clickable Links */}
-                    <AutoLinkPlugin />
-                    <ClickableLinkPlugin />
+                    <PluginErrorBoundary pluginName="AutoLinkPlugin">
+                      <AutoLinkPlugin />
+                    </PluginErrorBoundary>
+                    <PluginErrorBoundary pluginName="ClickableLinkPlugin">
+                      <ClickableLinkPlugin />
+                    </PluginErrorBoundary>
                     
                     {/* Keyboard Shortcuts */}
                     <KeyboardShortcutsPlugin />

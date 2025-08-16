@@ -32,10 +32,10 @@ import { Separator } from '@/components/ui/separator';
 import EmojiPicker from './EmojiPicker';
 import MediaUpload from './MediaUpload';
 import SearchPlugin from './SearchPlugin';
-import { 
-  Bold, 
-  Italic, 
-  Underline, 
+import {
+  Bold,
+  Italic,
+  Underline,
   Strikethrough,
   Link,
   Heading1,
@@ -285,7 +285,7 @@ export default function Toolbar({ postType }) {
       >
         <Bold className="h-4 w-4" />
       </Button>
-      
+
       <Button
         variant={isItalic ? "default" : "ghost"}
         size="sm"
@@ -294,7 +294,7 @@ export default function Toolbar({ postType }) {
       >
         <Italic className="h-4 w-4" />
       </Button>
-      
+
       <Button
         variant={isUnderline ? "default" : "ghost"}
         size="sm"
@@ -303,7 +303,7 @@ export default function Toolbar({ postType }) {
       >
         <Underline className="h-4 w-4" />
       </Button>
-      
+
       <Button
         variant={isStrikethrough ? "default" : "ghost"}
         size="sm"
@@ -314,7 +314,7 @@ export default function Toolbar({ postType }) {
       </Button>
 
       <Separator orientation="vertical" className="h-6 mx-1" />
-      
+
       <Button
         variant={isLink ? "default" : "ghost"}
         size="sm"
@@ -346,7 +346,7 @@ export default function Toolbar({ postType }) {
         >
           <Undo className="h-4 w-4" />
         </Button>
-        
+
         <Button
           variant="ghost"
           size="sm"
@@ -371,7 +371,7 @@ export default function Toolbar({ postType }) {
         >
           <Bold className="h-4 w-4" />
         </Button>
-        
+
         <Button
           variant={isItalic ? "default" : "ghost"}
           size="sm"
@@ -381,7 +381,7 @@ export default function Toolbar({ postType }) {
         >
           <Italic className="h-4 w-4" />
         </Button>
-        
+
         <Button
           variant={isUnderline ? "default" : "ghost"}
           size="sm"
@@ -391,7 +391,7 @@ export default function Toolbar({ postType }) {
         >
           <Underline className="h-4 w-4" />
         </Button>
-        
+
         <Button
           variant={isStrikethrough ? "default" : "ghost"}
           size="sm"
@@ -416,7 +416,7 @@ export default function Toolbar({ postType }) {
         >
           <Heading1 className="h-4 w-4" />
         </Button>
-        
+
         <Button
           variant={blockType === 'h2' ? "default" : "ghost"}
           size="sm"
@@ -451,7 +451,7 @@ export default function Toolbar({ postType }) {
         >
           <Quote className="h-4 w-4" />
         </Button>
-        
+
         <Button
           variant={blockType === 'code' ? "default" : "ghost"}
           size="sm"
@@ -535,7 +535,7 @@ export default function Toolbar({ postType }) {
   if (postType === 'article') {
     return renderExtendedToolbar();
   }
-  
+
   return renderBasicToolbar();
 }
 
