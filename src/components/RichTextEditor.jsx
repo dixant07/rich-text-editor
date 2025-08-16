@@ -198,21 +198,7 @@ function createEditorConfig(postType) {
   };
 }
 
-// Placeholder component
-function Placeholder({ postType }) {
-  const placeholders = {
-    [POST_TYPES.MICROBLOG]: "What's on your mind?",
-    [POST_TYPES.ARTICLE]: "Write your article...",
-    [POST_TYPES.POLL]: "Ask a question...",
-    [POST_TYPES.EVENT]: "Create an event..."
-  };
 
-  return (
-    <div className="editor-placeholder absolute top-4 left-4 text-muted-foreground pointer-events-none">
-      {placeholders[postType]}
-    </div>
-  );
-}
 
 // Post type selector component
 function PostTypeSelector({ currentType, onTypeChange }) {
@@ -300,7 +286,7 @@ export default function RichTextEditor() {
                           style={{ outline: 'none' }}
                         />
                       }
-                      placeholder={<Placeholder postType={postType} />}
+                      placeholder={null}
                       ErrorBoundary={LexicalErrorBoundary}
                     />
                     

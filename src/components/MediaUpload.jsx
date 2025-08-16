@@ -64,7 +64,7 @@ export default function MediaUpload({ onMediaSelect, maxFiles = 4 }) {
   };
 
   return (
-    <div className="space-y-3">
+    <>
       {/* Upload Button */}
       <Button
         variant="ghost"
@@ -136,7 +136,7 @@ export default function MediaUpload({ onMediaSelect, maxFiles = 4 }) {
           Add More Images ({selectedFiles.length}/{maxFiles})
         </Button>
       )}
-    </div>
+    </>
   );
 }
 
