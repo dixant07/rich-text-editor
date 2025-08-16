@@ -122,21 +122,7 @@ export default function MediaUpload({ onMediaSelect, maxFiles = 4 }) {
         </div>
       )}
 
-      {/* Upload Area (when no files selected) */}
-      {selectedFiles.length === 0 && (
-        <div
-          onClick={() => fileInputRef.current?.click()}
-          className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center cursor-pointer hover:border-muted-foreground/50 transition-colors"
-        >
-          <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
-          <div className="text-sm text-muted-foreground">
-            Click to upload images
-          </div>
-          <div className="text-xs text-muted-foreground mt-1">
-            PNG, JPG, GIF up to 10MB each
-          </div>
-        </div>
-      )}
+
 
       {/* Add More Button */}
       {selectedFiles.length > 0 && selectedFiles.length < maxFiles && (
